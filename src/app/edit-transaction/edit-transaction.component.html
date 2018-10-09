@@ -1,0 +1,37 @@
+<div class="col-lg-5">
+  <div class="well bs-component">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Edit Transaction</legend>
+        <div class="form-group">
+          <label for="inputGoal" class="col-lg-3 control-label">hash:</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputGoal" placeholder="Hash" [(ngModel)]="selectedTransaction && selectedTransaction.name"
+              name="name">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputGoal" class="col-lg-3 control-label">ver:</label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputGoal" placeholder="ver" [(ngModel)]="selectedTransaction && selectedTransaction.version"
+              name="weeklyReaddingGoal">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputTotal" class="col-lg-3 control-label"></label>
+          <div class="col-lg-8">
+            <input type="text" class="form-control" id="inputTotal" placeholder="vin_sz" [(ngModel)]="selectedTransaction && selectedTransaction.vinSize"
+              name="totalMinutesRead">
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <div class="col-lg-10 col-lg-offset-3">
+            <button type="button" class="btn btn-primary" (click)="saveChanges()">Save</button>
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>

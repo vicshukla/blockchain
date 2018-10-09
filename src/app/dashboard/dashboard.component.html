@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Single Block</h3>
+        </div>
+        <div class="panel-body">
+          <li *ngFor='let block of allBlocks'>
+            <i>{{block.title}}</i>
+            <a [routerLink]="['/editblock', block.blockID]">Edit</a>
+            <a (click)="deleteBook(block.blockID)">Delete</a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Single Transaction</h3>
+        </div>
+        <div class="panel-body">
+          <li *ngFor='let transaction of allTransactions'>
+            {{transaction.hash}}
+            <a [routerLink]="['/editreader', reader.readerID]">Edit</a>
+            <a (click)="deleteReader(reader.readerID)">Delete</a>
+          </li>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h3 class="panel-title">Latest Block</h3>
+        </div>
+        <div class="panel-body">
+          <i>{{latestBlock.hash}}</i> {{latestBlock.ver}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
